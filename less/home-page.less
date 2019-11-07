@@ -1,5 +1,23 @@
 .home {
 
+  .content-header {
+    border-bottom: 2px dashed silver;
+    hr {
+      width: 99vw;
+      position: relative;
+      left: calc(-50vw + 50%);
+      margin-top: 0;
+      margin-bottom: 0;
+      border-top: 2px dashed silver;
+    }
+    .fun-bus {
+      margin-bottom: 2%;
+    }
+    .header-welcome-text {
+      margin-bottom: 1%;
+    }
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
@@ -56,6 +74,11 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .btn {
+        .button-styles(#008080, #ffffff, 15px);
+      }
+
     }
   }
 }// home
