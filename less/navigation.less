@@ -4,7 +4,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
-  //border-bottom: 1px dashed gray;
+  @media @mobile {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
   a {
     line-height: 1.5;
     font-size: 1.6rem;

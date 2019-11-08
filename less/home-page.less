@@ -1,14 +1,13 @@
 .home {
 
   .content-header {
-    border-bottom: 2px dashed silver;
+    border-bottom: 2px dashed @navigation-border;
     hr {
       width: 99vw;
       position: relative;
       left: calc(-50vw + 50%);
-      margin-top: 0;
       margin-bottom: 0;
-      border-top: 2px dashed silver;
+      border-top: 2px dashed @navigation-border;
     }
     .fun-bus {
       margin-bottom: 2%;
@@ -16,6 +15,7 @@
     .header-welcome-text {
       margin-bottom: 1%;
     }
+    .mobile-size(90%, 0%, 5% auto, left);
   }
 
   .content-section {
@@ -24,26 +24,33 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+    .mobile-query(column);
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+      //.mobile-size(@width, @padding, @margin, @t-align)
+      .mobile-size(100%, 0%, 0 auto 1% auto, left);
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      //.mobile-size(@width, @padding, @margin, @t-align)
+      .mobile-size(100%, 0%, 0 auto 5% auto, left);
 
       img {
         border-radius: 10px;
       }
     }
+    .mobile-size(90%, 0%, 0 auto, left);
   }
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    .mobile-query(column-reverse);
 
     .text-content {
       padding-left: 1%;
@@ -54,11 +61,16 @@
       padding-right: 1%;
       padding-left: 0;
     }
+    .mobile-size(90%, 0%, 0 auto, left);
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    .mobile-query(column);
+    //.mobile-size(@width, @padding, @margin, @t-align)
+    .mobile-size(90%, 0%, 5% auto, left);
 
     img {
       border-radius: 10px;
@@ -70,15 +82,20 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    .mobile-size(90%, 5% 0, 5% auto 0 auto, left);
+
+    .mobile-query(column);
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      //.mobile-size(@width, @padding, @margin, @t-align)
+      .mobile-size(75%, 0%, 0 auto 3% auto, left);
 
       .btn {
         .button-styles(#008080, #ffffff, 15px);
+        .mobile-size(100%, 5%, 0 auto, center);
       }
-
     }
   }
 }// home

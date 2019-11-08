@@ -8,3 +8,19 @@
   padding: 5%;
   border-radius: @bd-rad;
 }
+
+.mobile-query(@col) {
+  @media @mobile {
+    display: flex;
+    flex-direction: @col;
+  }
+}
+
+.mobile-size(@width, @padding, @margin, @t-align) {
+  @media @mobile {
+    width: @width;
+    padding: @padding;
+    margin: @margin;
+    text-alignment: @t-align;
+  }
+}
